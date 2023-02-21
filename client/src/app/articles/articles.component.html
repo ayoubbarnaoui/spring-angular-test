@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="articles.component.css" />
+<body>
+  <div class="container-fluid banner">
+    <!-- <app-navbar></app-navbar> -->
+      <div class="row">
+      <div class="card " *ngFor="let article of  articleList "   >
+        <!-- <img [src]="*{'data:image/jpeg;base64,'+{article.image}}" width="330" height="200" alt="" /> -->
+        <h3>{{article.nom}}</h3>
+        <!-- <img [src]="article.image" width="330" height="200" alt="" /> -->
+        <div class="card-body " >
+          <img [src]="article.image" width="330" height="200" alt="" />
+
+          <!-- <h3>{{article.price}} DH</h3> -->
+        </div>
+        <div class="card-footer" style="background-color: red; border-radius: 15px;">
+            <h3>{{article.price}} DH</h3>
+          <!-- <button type="button" class="btn btn-success" 
+          >Acheter</button> -->
+
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align:right">
+      <button id="button_add" type="button" 
+              ><a routerLink="/add">Add</a></button>
+    </div>
+
+</div>
+
+</body>
